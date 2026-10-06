@@ -22,7 +22,7 @@ input, textarea, select, [contenteditable="true"] {
 /* Local Font-Face Declarations */
 @font-face {
   font-family: 'Maison Neue Extended';
-  src: url('../fonts/MaisonNeueExt-Book.woff2') format('woff2');
+  src: url('../fonts/maisonneueext-book.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -30,7 +30,7 @@ input, textarea, select, [contenteditable="true"] {
 
 @font-face {
   font-family: 'Maison Neue Extended';
-  src: url('../fonts/MaisonNeueExt-Bold.woff2') format('woff2');
+  src: url('../fonts/maisonneueext-bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -73,5 +73,37 @@ body {
   display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+/* Bulletproof Scroll Lock during Preloader / Loading */
+html:not(.is-loaded),
+body:not(.is-loaded) {
+  overflow: hidden !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  touch-action: none !important;
+  -webkit-overflow-scrolling: auto !important;
+  overscroll-behavior: none !important;
+}
+
+[data-preloader],
+[data-master-preloader] {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 999999 !important;
+  pointer-events: all !important;
+  touch-action: none !important;
+  overscroll-behavior: none !important;
+}
+
+html.is-loaded [data-preloader],
+html.is-loaded [data-master-preloader] {
+  pointer-events: none !important;
+}
+
+html.is-loaded [data-prevent-flicker] {
+  visibility: visible !important;
 }
 
