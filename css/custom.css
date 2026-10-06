@@ -1,0 +1,77 @@
+/* ==========================================================================
+   ERA RESIDENCE - CUSTOM & GLOBAL RULES
+   ========================================================================== */
+
+/* Non-selectable website requirement */
+*, *::before, *::after {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+}
+
+/* Allow text input and interaction for form controls */
+input, textarea, select, [contenteditable="true"] {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+}
+
+/* Local Font-Face Declarations */
+@font-face {
+  font-family: 'Maison Neue Extended';
+  src: url('../fonts/MaisonNeueExt-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Maison Neue Extended';
+  src: url('../fonts/MaisonNeueExt-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* High-fidelity serif and script fallbacks if Typekit is loading/offline */
+@font-face {
+  font-family: 'ambroise-francois-std';
+  src: local('Didot'), local('Bodoni MT'), local('Playfair Display'), local('Georgia'), serif;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'sloop-script-three';
+  src: local('Snell Roundhand'), local('Brush Script MT'), local('Great Vibes'), local('Bickham Script Pro'), cursive;
+  font-display: swap;
+}
+
+/* Baseline Layout & Scroll Adjustments */
+html {
+  scroll-behavior: initial;
+}
+
+body {
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fix for landscape cover on mobile devices */
+@media screen and (orientation: landscape) and (max-width: 991px) and (pointer: coarse) and (hover: none) {
+  .landscape-cover {
+    display: block;
+  }
+}
+
+/* Framework badge suppression */
+.w-webflow-badge {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+

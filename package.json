@@ -1,0 +1,21 @@
+{
+  "name": "resedince-by-yuvi",
+  "version": "1.0.0",
+  "description": "ERA Residence — Contemporary Mediterranean Residences in Estepona. Engineered & Developed by Yuvi.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "era-residence",
+    "luxury-real-estate",
+    "estepona",
+    "marbella",
+    "mediterranean",
+    "contemporary-architecture"
+  ],
+  "author": "Yuvi | ph no 7481889979",
+  "license": "ISC"
+}
